@@ -1,0 +1,95 @@
+GET  http://localhost:3000/api/item
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZmJmY2NiNzU5ZTZhM2FmYzQzNjU2MiIsImlhdCI6MTYxMDQzNzIxNiwiZXhwIjoxNjE5MDc3MjE2fQ.0Yk6r1rB4nwM4tBQmzLrllmbXOXG-72SavpR84x2D-0
+###
+
+POST http://localhost:3000/signup 
+Content-Type: application/json
+
+{
+    "email":"test@test.com",
+    "password":"123456"
+}
+
+###
+
+POST http://localhost:3000/signin 
+Content-Type: application/json
+
+{
+    "email":"test@test.com",
+    "password":"123456"
+}
+
+
+###
+
+GET  http://localhost:3000/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZmJmY2NiNzU5ZTZhM2FmYzQzNjU2MiIsImlhdCI6MTYxMDQ0MDI5OSwiZXhwIjoxNjE5MDgwMjk5fQ.Bq_y3I3v_tnoIODD1B1LFGMoVGT5pDkj24embe1D6Bo
+
+
+###
+POST http://localhost:3000/api/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZmJmY2NiNzU5ZTZhM2FmYzQzNjU2MiIsImlhdCI6MTYxMDQzOTY2NSwiZXhwIjoxNjE5MDc5NjY1fQ.88XAuBGmDgXkiaqHpRkOxOzRmeZdvXddUaURjcvbKvQ
+Content-Type: application/json
+
+{
+    "name": "list2",
+    "description":"its a first list here",
+    "createdBy": "5ffbfccb759e6a3afc436562"
+}
+
+###
+
+GET http://localhost:3000/api/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZmJmY2NiNzU5ZTZhM2FmYzQzNjU2MiIsImlhdCI6MTYxMDQzOTY2NSwiZXhwIjoxNjE5MDc5NjY1fQ.88XAuBGmDgXkiaqHpRkOxOzRmeZdvXddUaURjcvbKvQ
+Content-Type: application/json
+
+###
+
+
+PUT http://localhost:3000/api/list/5ffd537c86eec416fcf37791
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZmJmY2NiNzU5ZTZhM2FmYzQzNjU2MiIsImlhdCI6MTYxMDQzOTQ2NCwiZXhwIjoxNjE5MDc5NDY0fQ.Zjhsgh9YJYQyGLgNrfDQQluO7BLW-TemZTzP-NGfDPw
+Content-Type: application/json
+
+{
+    "description":"first list updated",
+    "name": "list1",
+    "createdBy": "5ffbfccb759e6a3afc436562"
+}
+
+###
+
+DELETE http://localhost:3000/api/list/5ffd537c86eec416fcf37791
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZmJmY2NiNzU5ZTZhM2FmYzQzNjU2MiIsImlhdCI6MTYxMDQzOTY2NSwiZXhwIjoxNjE5MDc5NjY1fQ.88XAuBGmDgXkiaqHpRkOxOzRmeZdvXddUaURjcvbKvQ
+
+###
+
+POST http://localhost:3000/api/item
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZmJmY2NiNzU5ZTZhM2FmYzQzNjU2MiIsImlhdCI6MTYxMDQ0NDQ5MywiZXhwIjoxNjE5MDg0NDkzfQ.rcXreaiDi3tfQke97U1sGWo3f_qZPKNQPznaB2zU44k
+Content-Type: application/json
+
+{   
+    "name":"item5",
+    "user": "5ffbfccb759e6a3afc436562",
+    "notes":"notes is here",
+    "list": "5ffd5d1bc8093a341c6f0d40",
+    "createdBy": "5ffbfccb759e6a3afc436562",
+    "due":"2021-01-12",
+    "status":"active"
+}   
+
+###
+
+PUT http://localhost:3000/api/item/5ffd5eda5db39a3dd88ef7a5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZmJmY2NiNzU5ZTZhM2FmYzQzNjU2MiIsImlhdCI6MTYxMDQ0NDQ5MywiZXhwIjoxNjE5MDg0NDkzfQ.rcXreaiDi3tfQke97U1sGWo3f_qZPKNQPznaB2zU44k
+Content-Type: application/json
+
+{   
+    "name":"item89",
+    "user": "5ffbfccb759e6a3afc436562",
+    "notes":"notes is here",
+    "list": "5ffd5d1bc8093a341c6f0d40",
+    "createdBy": "5ffbfccb759e6a3afc436562",
+    "due":"2021-01-12",
+    "status":"active"
+}
